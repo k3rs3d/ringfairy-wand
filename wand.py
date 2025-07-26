@@ -53,7 +53,7 @@ class WebsiteManagerApp(tk.Tk):
         self.save_entry_btn = tk.Button(btn_frame, text="Save Changes", command=self.save_entry, state='disabled')
         self.save_entry_btn.pack(fill=tk.X)
 
-        tk.Button(btn_frame, text="Settings...", command=self.edit_settings).pack(fill=tk.X, pady=(20,0))
+        tk.Button(btn_frame, text="Command Line Settings", command=self.edit_settings).pack(fill=tk.X, pady=(20,0))
         tk.Button(btn_frame, text="Generate Webring", command=self.generate_webring).pack(fill=tk.X)
 
         details_frame = tk.Frame(self)
@@ -207,7 +207,7 @@ class WebsiteManagerApp(tk.Tk):
     def edit_settings(self):
         config = self.generator_config
         dialog = tk.Toplevel(self)
-        dialog.title("Generator Settings")
+        dialog.title("Command-Line Override Settings")
         fields = [
             ("Output folder", "output"),
             ("Assets folder", "assets"),
